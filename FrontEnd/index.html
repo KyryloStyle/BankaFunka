@@ -1,0 +1,146 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Banka Funka JAM</title>
+
+        <link rel="stylesheet" href="css/style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&family=Outfit:wght@100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    </head>
+    <body>
+        <div class="preview">
+            <img src="images/preview.gif" class="preview-gif" alt="Preview animation">
+            <div class="overlay"></div>
+            <h1>Banka Funka JAM</h1>
+            <div class="preview-description">
+                <p>Experience the true spirit of old-school dance as performers take the stage on hard floors, just like the legends of the past.</p>
+                <p>No protective gear, no flashy embellishments—only raw skill, passion, and authentic moves that honor the original tradition of street dance.</p>
+            </div>
+            <div class="buttons">
+                <button class="primary">Get Tickets</button>
+                <button class="secondary">Copy Address</button>
+            </div>
+        </div>
+        <!-- Line Up-->
+        <div class="lineup-container">
+            <h1>LINE UP</h1>
+        <div v-for="(dancer, index) in dancers" 
+            :key="index" 
+            class="card" 
+            v-show="currentIndex === index">
+            <img :src="dancer.photo" alt="dancer photo">
+            <h3>{{ dancer.name }}</h3>
+            <p>{{ dancer.bio }}</p>
+        </div>
+
+        <div class="controls">
+            <button @click="prevCard">←</button>
+            <button @click="nextCard">→</button>
+        </div>
+        </div>
+
+        <hr class="divider">
+
+        <!--Contest-->
+        <div class="contest-container">
+            <h1>CONTEST</h1>
+            <div class="contest">
+                <div class="left">
+                    <h2>ONE WARRIOR</h2>
+                    <p>Watch as brave dancers step onto the stage alone, facing two opponents at a time. No team support, no backup—just pure skill, raw energy, and fearless moves. Each warrior battles with creativity and passion, proving who truly dominates the floor. Only the strongest survive!</p>
+                </div>
+
+                <div class="right">
+                    <iframe 
+                        src="https://www.youtube.com/embed/C2bx8s3SM3I?autoplay=1&mute=1" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <!--Prices-->
+<section class="pricing" id="tickets">
+  <h1>TICKETS</h1>
+  <div class="pricing-cards">
+    
+    <div class="card">
+      <div class="ribbon">Basic</div>
+      <p class="price">€15</p>
+      <ul>
+        <li>Access to the event</li>
+        <li>Free drink</li>
+        <li>Standard seating</li>
+      </ul>
+      <button class="primary">Buy Now</button>
+    </div>
+
+    <div class="card featured">
+      <div class="ribbon">Premium</div>
+      <p class="price">€35</p>
+      <ul>
+        <li>All Basic benefits</li>
+        <li>Reserved seating</li>
+        <li>Merchandise pack</li>
+      </ul>
+      <button class="primary">Buy Now</button>
+    </div>
+
+    <div class="card">
+      <div class="ribbon">VIP</div>
+      <p class="price">€50</p>
+      <ul>
+        <li>All Premium benefits</li>
+        <li>Front row seating</li>
+        <li>Meet the dancers</li>
+      </ul>
+      <button class="primary">Buy Now</button>
+    </div>
+
+  </div>
+</section>
+
+<section class="sponsors">
+  <h2>Our Sponsors</h2>
+  <p class="subtitle">Supported by global leaders who believe in our vision</p>
+
+  <div class="sponsor-logos">
+    <a href="https://www.nike.com" target="_blank" rel="noopener">
+      <img src="images/nike.png" alt="Nike logo">
+    </a>
+    <a href="https://www.booking.com" target="_blank" rel="noopener">
+      <img src="images/booking.png" alt="Booking.com logo">
+    </a>
+    
+    <a href="https://www.airbnb.com" target="_blank" rel="noopener">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Airbnb_Logo_Bélo.svg" alt="Airbnb logo">
+    </a>
+    <a href="https://www.vodafone.com" target="_blank" rel="noopener">
+      <img src="images/vodafone.png" alt="Vodafone logo">
+    </a>
+    <a href="https://www.kharkiv.ua" target="_blank" rel="noopener">
+      <img src="images/kharkiv.svg" alt="Kharkiv logo">
+    </a>
+  </div>
+</section>
+
+
+
+
+        <script src="js/script.js"></script>
+    </body>
+    </html>
