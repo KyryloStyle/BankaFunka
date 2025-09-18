@@ -2,9 +2,9 @@ new Vue({
   el: '.lineup-container',
   data: {
     dancers: [
-      { name: 'DJ Nail', photo: 'images/nail.jpg', bio: 'Underground DJ with shadow skills' },
-      { name: 'MC Flipper', photo: 'images/flipp.jpg', bio: 'Expert in rolling the crowd' },
-      { name: 'Bboy Max-T', photo: 'images/maxt.jpg', bio: 'BBoy, who is dancing fro over 25 years' }
+      { name: 'DJ Nail', photo: 'FrontEnd/images/nail.jpg', bio: 'Underground DJ with shadow skills' },
+      { name: 'MC Flipper', photo: 'FrontEnd/images/flipp.jpg', bio: 'Expert in rolling the crowd' },
+      { name: 'Bboy Max-T', photo: 'FrontEnd/images/maxt.jpg', bio: 'BBoy, who is dancing fro over 25 years' }
     ],
     currentIndex: 0
   },
