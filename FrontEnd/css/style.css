@@ -3,15 +3,16 @@ html, body {
   font-family: "Sora", sans-serif;
   background: #0b3d0b;
   color: #fff;
+  
 }
 
 .preview {
   padding: 6vh 4vh;
-  display: flex;
+  display: flex;  
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 88vh;
   background: linear-gradient(145deg, #0b3d0b, #145214, #0b3d0b);
   text-align: center;
   overflow: hidden;
@@ -89,16 +90,21 @@ button.primary:hover {
   box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
 
-button.secondary {
-  background: transparent;
+a.secondary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
   border: 2px solid #FFD700;
+  border-radius: 30px;
   color: #FFD700;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background: transparent;
 }
 
-button.secondary:hover {
+a.secondary:hover {
   background: #FFD700;
   color: #0b3d0b;
-  transform: translateY(-3px);
 }
 
 .lineup-container {
@@ -208,7 +214,7 @@ button.secondary:hover {
 
 .contest .right iframe {
   width: 100%;
-  max-width: 560px;
+  height: auto;
   aspect-ratio: 16/9;
   border-radius: 15px;
   border: 2px solid #FFD70033;
@@ -234,10 +240,13 @@ button.secondary:hover {
 }
 
 .pricing {
+  width: 100%;
+  margin: 0 auto;
   text-align: center;
-  padding: 6rem 2rem;
+  padding: 0 1rem ;
   background: linear-gradient(145deg, #0b3d0b, #0f480f, #145214); /* совпадает с сайтом */
   color: #FFD700;
+  box-sizing: border-box;
 }
 
 .pricing h1 {
@@ -260,6 +269,8 @@ button.secondary:hover {
   border-radius: 20px;
   padding: 3rem 2rem 2rem;
   width: 320px;
+  max-width: 100%;
+  overflow-wrap: break-word;
   text-align: center;
   transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
   box-shadow: 0 10px 20px rgba(0,0,0,0.4);
@@ -436,6 +447,11 @@ button.secondary:hover {
     margin-bottom: 1rem;
   }
 
+  .lineup-container h1{
+    font-size: clamp(2rem, 90vw, 3.5rem);
+    margin-top: 1rem;
+  }
+
   .card h3 {
     font-size: 1.3rem;
     margin-bottom: 0.75rem;
@@ -447,11 +463,18 @@ button.secondary:hover {
   }
 
   /* === Pricing cards === */
+  .pricing{
+    overflow: hidden;
+  }
+
   .pricing-cards {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     align-items: center;
+    margin: 0;
+    width: 100%;
+    
   }
 
   .pricing .card {
@@ -484,6 +507,11 @@ button.secondary:hover {
     margin-top: 1rem;
   }
 
+  .pricing h1{
+    margin-top:1rem;
+    font-size: clamp(2rem, 90vw, 3.5rem);
+  }
+
   .contest {
     display: flex;
     flex-direction: column; /* вместо ряда — в колонку */
@@ -509,6 +537,10 @@ button.secondary:hover {
   .contest h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
+  }
+
+  .contest-container h1 {
+    font-size: clamp(2rem, 90vw, 3.5rem);
   }
 
   .contest p {
